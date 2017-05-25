@@ -1,0 +1,22 @@
+body {
+  margin: 0
+}
+
+.rooter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rooter ul {
+  display: flex;
+  padding: 0;
+}
+
+.rooter ul li{
+  padding: 1rem;
+  list-style: none;
+}
+
+.rooter ul li a{
+  text-decoration: none;
+}

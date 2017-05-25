@@ -1,10 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+// REACT
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-import './index.css';
+// components
+import Router from './Components/Router'
+
+const Root = _ => {
+  return (
+    <Router></Router>
+  )
+}
 
 ReactDOM.render(
-  <App />,
+  <Root />,
   document.getElementById('root')
 )
