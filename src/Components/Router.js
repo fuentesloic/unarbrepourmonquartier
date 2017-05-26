@@ -4,23 +4,21 @@ import { BrowserRouter, Route, Redirect } from 'react-router-dom'
 
 // Components
 import App from './App'
-import Nav from './Nav'
-import Lang from './Lang'
+import Header from './Header'
 
- class Router extends Component {
-   render() {
-     return (
-       <BrowserRouter>
-         <div className='rooter'>
-           <Nav />
-           <Lang />
-           <Route path='/a-propos' component={App} />
-           <Redirect from='*' to='/fr/' />
-         </div>
-       </BrowserRouter>
+class Router extends Component {
+  render() {  
+    return (
+      <BrowserRouter>
+        <div>
+          <Header />
+          <Route path='/a-propos' component={App} />
+          <Redirect from='*' to='/fr/' />
+        </div>
+      </BrowserRouter>
      )
    }
- }
+}
 
- export default Router
+export default Router
 

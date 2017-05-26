@@ -16,13 +16,7 @@ var config = {
 }
 firebase.initializeApp(config);
 
-const Root = _ => {
-  return (
-    <Router></Router>
-  )
-}
-
 ReactDOM.render(
-  <Root />,
+  <Router />,
   document.getElementById('root')
 )

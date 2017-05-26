@@ -2,21 +2,22 @@ body {
   margin: 0
 }
 
-.rooter {
+.nav {
   display: flex;
   justify-content: space-between;
+  list-style: none;
 }
 
-.rooter ul {
+.nav ul {
   display: flex;
   padding: 0;
 }
 
-.rooter ul li{
+.nav ul li{
   padding: 1rem;
   list-style: none;
 }
 
-.rooter ul li a{
+.nav ul li a{
   text-decoration: none;
 }

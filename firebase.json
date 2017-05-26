@@ -1,0 +1,16 @@
+{ 
+  "lang": {
+    "fr": {
+      "navigation": {
+        "navLink": ["a-propos", "acheter-un-arbre", "conseils", "recuperer-son-arbre", "nous-contacter"],
+        "navTitle": ["À propos", "Acheter un arbre", "Conseils", "Récupérer son arbre", "Nous contacter"]
+      }
+    },
+    "en": {
+      "navigation": {
+        "navLink": ["about-us", "buy-a-tree", "planting-tips", "pick-up-your-tree", "contact-us"],
+        "navTitle": ["About us", "Buy a tree", "Planting tips", "Pick-up your tree", "contact us"]
+      }
+    }
+  }
+}

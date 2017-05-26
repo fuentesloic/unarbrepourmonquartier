@@ -10,19 +10,29 @@ class Nav extends React.Component {
     super(props)
     this.state = {
       navLink: {},
-      navTitle: {},
-      lang: {}
+      navTitle: {}
     }
   }
 
   componentDidMount() {
-    let lang = document.location.href
-    if (lang.includes('/fr/')) {
+    const rootRef = firebase.database().ref(`/lang/fr/navigation/`)
+    const navLink = rootRef.child('navLink')
+    navLink.on('value', snap => {
       this.setState({
-        lang: 'fr'
+        navLink: snap.val(),
       })
-    }
-    const rootRef = firebase.database().ref('/')
+    })
+    const navTitle = rootRef.child('navTitle')
+    navTitle.on('value', snap => {
+      this.setState({
+        navTitle: snap.val(),
+      })
+    })
+  }
+
+  componentWillReceiveProps(props) {
+    console.log(this.props.lang);
+    const rootRef = firebase.database().ref(`/lang/${this.props.lang}/navigation/`)
     const navLink = rootRef.child('navLink')
     navLink.on('value', snap => {
       this.setState({
@@ -44,10 +54,10 @@ class Nav extends React.Component {
       .map(key => <NavLi key={key} to={this.state.navLink[key]} title={this.state.navTitle[key]}/>)
 
     return (
-        <ul>
-          {navLi}
-        </ul>      
-    )
+      <ul>
+        {navLi}
+      </ul>
+    ) 
   }
 }
 
