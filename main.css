@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "fontawesome";
+}
+
+body {
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  margin: 0;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+
+/* navigation */
+.nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav ul li{
+  list-style: none;
+}
+
+.nav ul li a{
+  text-decoration: none;
+}
+
+/* menu */
+.menu {
+  display: flex;
+}
+.menu ul li {
+  width: 12rem;
+}
+.menu ul li a {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem 1rem 2rem;
+  color: #F7EDE0;
+  max-height: 60px;
+}
+
+#a-propos,
+#about-us {
+  background-color: #D06503;
+}
+
+#acheter-un-arbre,
+#buy-a-tree {
+  background-color: #E9931A;
+}
+
+#conseils,
+#planting-tips {
+  background-color: #1691BE;
+}
+
+#recuperer-son-arbre,
+#pick-up-your-tree {
+  background-color: #166BA2;
+}
+
+#nous-contacter,
+#contact-us {
+  background-color: #1B3647;
+}
+
+#a-propos:hover,
+#about-us:hover,
+#acheter-un-arbre:hover,
+#buy-a-tree:hover,
+#conseils:hover,
+#planting-tips:hover,
+#recuperer-son-arbre:hover,
+#pick-up-your-tree:hover,
+#nous-contacter:hover,
+#contact-us:hover {
+  border-bottom: 0.35rem solid rgba(0,0,0,0.25);
+  animation-name: menu;
+  animation-duration: 1s;
+}
+
+@keyframes menu {
+    0%   {
+      border-color: rgba(0,0,0,0);
+    }
+    100% {
+      border-color: rgba(0,0,0,0.25);
+    }
+}
+
+/* icons */
+
+#a-propos::before,
+#about-us::before,
+#acheter-un-arbre::before,
+#buy-a-tree::before,
+#conseils::before,
+#planting-tips::before,
+#recuperer-son-arbre::before,
+#pick-up-your-tree::before,
+#nous-contacter::before,
+#contact-us::before {
+  position: relative;
+  display: block;
+  font-family: "fontawesome";
+  font-size: 1.5rem;
+  border-radius: 100%;
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+  top: -0.5rem;
+  box-shadow: 0 0 0 30px transparent;
+  background: rgba(255,255,255,0.1);
+}
+
+#a-propos::before,
+#about-us::before {
+  content: "\f004";
+}
+
+#acheter-un-arbre::before,
+#buy-a-tree::before {
+  content: "\f291";
+}
+
+#conseils::before,
+#planting-tips::before {
+  content: "\f164";
+}
+
+#recuperer-son-arbre::before,
+#pick-up-your-tree::before {
+  content: "\f1bb";
+}
+
+#nous-contacter::before,
+#contact-us::before {
+  content: "\f27a";
+}
