@@ -1,6 +1,6 @@
 // REACT
 import React, { Component } from 'react'
-import { BrowserRouter, Route, Redirect } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 // Components
 import App from './App'
@@ -13,7 +13,6 @@ class Router extends Component {
         <div>
           <Header />
           <Route path='/a-propos' component={App} />
-          <Redirect from='*' to='/fr/' />
         </div>
       </BrowserRouter>
      )
@@ -21,4 +20,3 @@ class Router extends Component {
 }
 
 export default Router
-

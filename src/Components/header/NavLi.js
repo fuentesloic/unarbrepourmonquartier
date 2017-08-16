@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 class NavLi extends React.Component {
   render() {
     return (
-      <li><NavLink to={this.props.to}>{this.props.title}</NavLink></li>
+      <li><NavLink id={this.props.to} to={this.props.to}>{this.props.title}</NavLink></li>
     )
   }
 }
